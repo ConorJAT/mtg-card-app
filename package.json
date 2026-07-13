@@ -1,0 +1,11 @@
+{
+  "name": "mtg-card-app",
+  "version": "1.0.0",
+  "description": "An application designed to catalogue and keep track of one's Magic: The Gathering cards in their collection, decks and bulk.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Conor Race",
+  "license": "UNLICENSED"
+}
