@@ -1,0 +1,9 @@
+#searchResult{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    padding: 10px;
+}
