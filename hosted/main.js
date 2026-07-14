@@ -24,7 +24,7 @@ const searchCards = () => {
 	if (input.length < 1) return;
 
 	// Append cleaned input to the query url.
-	query += input;
+	query += input + "&unique=prints";
 
     // H.) Update the UI.
 	document.querySelector("#display").innerHTML = "<br>Searching for '" + inputDisplay + "'</br>";
@@ -76,14 +76,14 @@ const cardsLoaded = (e) => {
 
             // Build a card object that's modal/double-sided.
             if (card.card_faces) {
-                newCard += `<img src='${card.card_faces[0].image_uris.small}' name='${card.name}'>`;
+                newCard += `<img src='${card.card_faces[0].image_uris.small}' name='${card.name}' scry_id='${card.id}'>`;
 
             // Build a card object that's a part of a melded card.
             // } else if (card.all_parts) {
 
             // Build a standard single-sided card object.
             } else {
-                newCard += `<img src='${card.image_uris.small}' name='${card.name}'>`;
+                newCard += `<img src='${card.image_uris.small}' name='${card.name}' scry_id='${card.id}'>`;
             }
 
             newCard += `</div>`;
