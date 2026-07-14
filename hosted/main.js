@@ -74,9 +74,18 @@ const cardsLoaded = (e) => {
             let newCard = `<div class='card'>`;
             newCard += `<h3>${card.name}</h3>`;
 
-            if (card.image_uris) {
+            // Build a card object that's modal/double-sided.
+            if (card.card_faces) {
+                newCard += `<img src='${card.card_faces[0].image_uris.small}' name='${card.name}'>`;
+
+            // Build a card object that's a part of a melded card.
+            // } else if (card.all_parts) {
+
+            // Build a standard single-sided card object.
+            } else {
                 newCard += `<img src='${card.image_uris.small}' name='${card.name}'>`;
-            } 
+            }
+
             newCard += `</div>`;
 
             // console.log(newCard);
