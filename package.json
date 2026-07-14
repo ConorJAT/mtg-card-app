@@ -4,13 +4,21 @@
   "description": "An application designed to catalogue and keep track of one's Magic: The Gathering cards in their collection, decks and bulk.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./src/server.js",
+    "pretest": "eslint ./src --fix",
+    "test": "echo \"Tests Complete!\"",
+    "nodemon": "nodemon -e js,html,css --watch ./src --watch ./hosted ./src/server.js",
+    "buildBundle": "webpack",
+    "watchBundle": "webpack watch"
   },
   "author": "Conor Race",
   "license": "UNLICENSED",
   "devDependencies": {
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.32.0"
+    "eslint-plugin-import": "^2.32.0",
+    "nodemon": "^3.1.14",
+    "webpack": "^5.108.4",
+    "webpack-cli": "^7.2.1"
   }
 }
